@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пример структуры HTML-документа">
+    <title>Моё портфолио</title>
+
+    <!-- 1. Внешний файл -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <!-- 2. Внутренняя таблица стилей -->
+    <style>
+        body {
+            background: linear-gradient(to right, #fff176, #f48fb1);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+
+        td.colored {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3. Внутритеговое включение (атрибут style) -->
+    <header style="background-color: #ffc107; padding: 20px; border-radius: 10px;">
+        <h1>Моё портфолио</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#skills" class="nav-link">Навыки</a></li>
+                <li><a href="#media" class="nav-link">Медиа</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+                <li><a href="projects.html" class="nav-link">2-ая страница</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Обо мне</h2>
+        <p><b>Привет!</b> Меня зовут Влад, и я <i>веб-разработчик</i>.</p>
+        <p>Я люблю программировать, <u>изучать</u> новые технологии и <s>ошибаться</s> учиться на опыте.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Навыки</h2>
+        <h3>Любимые языки программирования</h3>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>HTML & CSS</li>
+        </ul>
+        <h3>Хобби</h3>
+        <ol>
+            <li>Чтение</li>
+            <li>Путешествия</li>
+            <li>Музыка</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Фотографии</h2>
+        <img src="vladi1.jpg" alt="Я и мои друзья">
+    </section>
+
+    <section id="media">
+        <h2>Медиа</h2>
+        <audio controls>
+            <source src="T-face.mp3" type="audio/mpeg">
+        </audio>
+        <video controls width="500">
+            <source src="касп.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section>
+        <h2>Таблица</h2>
+        <table>
+            <tr>
+                <th>Технология</th>
+                <th>Опыт</th>
+            </tr>
+            <tr>
+                <td rowspan="2">HTML</td>
+                <td class="colored">Продвинутый</td>
+            </tr>
+            <tr>
+                <td>Средний</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Свяжитесь со мной</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+375..." required><br>
+
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date"><br>
+
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time"><br>
+
+            <label for="birthday">День рождения:</label>
+            <input type="date" id="birthday" name="birthday"><br>
+
+            <label for="message">Сообщение:</label><br>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea><br>
+
+            <button type="submit">Отправить</button>
+            <button type="reset">Очистить</button>
+        </form>
+    </section>
+
+    <footer>
+        <h2>Полезные ссылки</h2>
+        <a href="https://github.com/qq32252" target="_blank" class="nav-link">Мой GitHub</a><br>
+        <a href="#about" class="nav-link">Вернуться вверх</a><br>
+    </footer>
+
+    <p>&copy; 2025 Влад. Все права защищены.</p>
+</body>
+</html>

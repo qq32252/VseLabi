@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вариант 50</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Вариант 50</h1>
+    <p>Фамилия: Мишкель Владислав</p>
+
+    <!-- Задание 1 -->
+    <h2>Задание 1: Работа с объектом Date</h2>
+    <button onclick="showCurrentDay()">Показать текущий день месяца</button>
+
+    <!-- Задание 2 -->
+    <h2>Задание 2: Цикл for (вывод имени n+5 раз)</h2>
+    <div id="task2"></div>
+
+    <!-- Задание 3 -->
+    <h2>Задание 3: Работа с массивом</h2>
+    <div id="task3"></div>
+
+    <!-- Задание 4 -->
+    <h2>Задание 4: Расчёт по формуле</h2>
+    <div id="task4"></div>
+
+    <!-- Задание 5 -->
+    <h2>Задание 5: Работа со строками</h2>
+    <div id="task5"></div>
+
+    <script>
+        // Задание 2 (вызов функции из script.js)
+        document.getElementById("task2").innerHTML = repeatName(50, "Мишкель Владислав");
+
+        // Задание 3 (вызов функции из script.js)
+        document.getElementById("task3").innerHTML = processArray([3, -1, 8, -4, 5]);
+
+        // Задание 4 (вызов функции из script.js)
+        document.getElementById("task4").innerHTML = `Результат для x=3: ${calculateY(2)}`;
+
+        // Задание 5 (вызов функции из script.js)
+        document.getElementById("task5").innerHTML = processStrings("Владислав", "Программирование, спорт");
+    </script>
+</body>
+</html>

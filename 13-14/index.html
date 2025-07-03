@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вариант №47 - Мишкель Владислав Валерьевич</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Задание 1 -->
+  <p id="user-name">Мишкель Владислав Валерьевич</p>
+  <a href="https://www.youtube.com" id="favorite-link">Мой любимый сайт - YouTube</a>
+  <img src="qq.jpg" alt="Пример изображения" id="image-to-remove" />
+
+  <!-- Задание 3 -->
+  <button id="change-style-btn">Изменить стиль</button>
+
+  <!-- Вторая форма "Образование и Работа" -->
+  <form class="education-form" id="education-form" novalidate>
+
+    <section class="section-header">
+      <h2>ОБРАЗОВАНИЕ И РАБОТА</h2>
+    </section>
+
+    <div class="field-group">
+      <label for="education-info">• Информация об образовании</label>
+      <select id="education-info" required>
+        <option value="" disabled selected>Выберите вариант</option>
+        <option value="school">Учащийся общеобразовательного учреждения</option>
+        <option value="college">Студент колледжа</option>
+        <option value="university">Студент ВУЗа</option>
+      </select>
+      <span class="error-message"></span>
+    </div>
+
+    <div class="field-group">
+      <label for="employment-info">• Информация о трудоустройстве</label>
+      <select id="employment-info" required>
+        <option value="" disabled selected>Выберите вариант</option>
+        <option value="student">Учащийся</option>
+        <option value="employed">Работающий</option>
+        <option value="unemployed">Безработный</option>
+      </select>
+      <span class="error-message"></span>
+    </div>
+
+    <section class="section-header section-small">
+      <h3>МЕСТО УЧЕБЫ</h3>
+    </section>
+
+    <fieldset class="study-place">
+      <div class="field-group full-width">
+        <label for="institution-name">* Наименование учебного заведения</label>
+        <input type="text" id="institution-name" required />
+        <span class="error-message"></span>
+      </div>
+
+      <div class="field-group full-width">
+        <label for="region">* Регион</label>
+        <select id="region" required>
+          <option value="" disabled selected>Укажите регион</option>
+          <option value="region1">Регион 1</option>
+          <option value="region2">Регион 2</option>
+        </select>
+        <span class="error-message"></span>
+      </div>
+
+      <div class="field-group full-width">
+        <label for="city">* Населённый пункт</label>
+        <input type="text" id="city" required />
+        <span class="error-message"></span>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group half-width">
+          <label for="month-admission">* Дата поступления - месяц</label>
+          <select id="month-admission" required>
+            <option value="" disabled selected>Укажите месяц</option>
+            <option value="jan">Январь</option>
+            <option value="feb">Февраль</option>
+            <option value="mar">Март</option>
+          </select>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="field-group half-width">
+          <label for="year-admission" style="visibility: visible;">* Дата поступления - год</label>
+          <select id="year-admission" required>
+            <option value="" disabled selected>Укажите год</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
+          <span class="error-message"></span>
+        </div>
+      </div>
+
+      
+    </fieldset>
+
+    <button type="submit" style="margin-top: 20px;">Отправить</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

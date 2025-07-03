@@ -1,0 +1,127 @@
+/* Внешний CSS файл styles.css */
+/* Импорт нестандартных шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Универсальный селектор */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Селектор по тегу */
+body {
+    font-family: 'Roboto Slab', serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+    padding: 20px;
+}
+
+/* Селектор по классу */
+.nav-link {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Селектор по идентификатору */
+#about {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Псевдокласс */
+a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+/* Псевдоэлемент */
+h2::first-letter {
+    color: darkblue;
+    font-size: 150%;
+}
+
+/* Дочерние селекторы */
+nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+/* Соседние селекторы */
+h2 + p {
+    font-style: italic;
+}
+
+/* Селектор по атрибуту */
+input[type="text"] {
+    border: 2px solid #007bff;
+    padding: 5px;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+/* Оформление текста */
+b {
+    font-weight: bold;
+}
+i {
+    font-style: italic;
+}
+u {
+    text-decoration: underline;
+}
+s {
+    text-decoration: line-through;
+}
+
+/* Списки */
+ul {
+    list-style: url('marker.png'); /* Свой маркер */
+}
+
+/* Изображения */
+img {
+    border-radius: 50%;
+    border: 5px solid #007bff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    width: 200px;
+}
+
+/* Кнопки и формы */
+button, input, textarea {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Анимация */
+h1 {
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    from {transform: translateX(0);}
+    to {transform: translateX(20px);}
+}

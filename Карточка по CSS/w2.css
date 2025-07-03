@@ -1,0 +1,16 @@
+
+a:link {
+    color:yellow;
+    text-decoration: none; /* Без подчеркивания */
+}
+
+a:visited {
+    color: red; /* Посещённая ссылка — красная */
+}
+a:hover {
+    color: rgb(65, 215, 80);
+}
+a:active {
+    color: rgb(73, 186, 214);
+
+}

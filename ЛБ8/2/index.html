@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .product-card {
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            position: relative;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: block;
+            background-color: #eee;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .current-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .old-price {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        
+        .stock {
+            color: #e53935;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .product-info {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .rating-value {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .reviews {
+            color: #666;
+        }
+        
+        .add-to-cart {
+            background-color: #3b38f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: auto;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #4f23bc;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .button-container {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        .additional-info {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <img src="your-image.jpg" alt="Впитывающие салфетки" class="product-image">
+        
+        <div class="price-container">
+            <span class="current-price">3,93 BYN</span>
+            <span class="old-price">5,00 BYN</span>
+        </div>
+        
+        <div class="stock">Осталось 2 шт.</div>
+        
+        <div class="product-info">
+            Салфетки для уборки Чистюля,<br>
+            34х38 см
+        </div>
+        
+        <div class="rating">
+            <span class="rating-value">4,9</span>
+            <span class="reviews">914 отзывов</span>
+        </div>
+        
+        <div class="button-container">
+            <button class="add-to-cart">В корзину</button>
+        </div>
+        
+        <div class="additional-info">17 марта. OZON</div>
+    </div>
+</body>
+</html>

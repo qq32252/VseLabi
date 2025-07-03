@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Объединённая страница</title>
+  <link rel="stylesheet" href="responsive-grid.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-card {
+      width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      margin: 20px auto;
+    }
+    .product-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background-color: #eee;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .current-price { font-weight: bold; }
+    .old-price { text-decoration: line-through; color: gray; margin-left: 10px; }
+    .add-to-cart {
+      background-color: #3b38f3;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .add-to-cart:hover {
+      background-color: #4f23bc;
+    }
+  </style>
+</head>
+<body>
+ <!-- Бургер-меню без JS -->
+<header class="burger-header">
+  <input type="checkbox" id="burger-toggle" class="burger-toggle" />
+  <label for="burger-toggle" class="burger-icon">&#9776;</label>
+  <nav class="burger-menu">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <!-- Grid-сетка -->
+  <div class="grid-container">
+    <div class="header">
+      <div class="left-blocks">
+        <div>1</div><div>2</div>
+      </div>
+      <div class="right-blocks">
+        <div>3</div><div>4</div>
+      </div>
+    </div>
+    <div class="row row5">5</div>
+    <div class="row row6">6</div>
+    <div class="row row7">7</div>
+    <div class="cards">
+      <div class="card">8</div><div class="card">9</div><div class="card">10</div>
+      <div class="card">11</div><div class="card">12</div><div class="card">13</div>
+    </div>
+    <div class="row row14">14</div>
+    <div class="row row15">15</div>
+    <div class="footer"><div>16</div><div>17</div></div>
+  </div>
+
+  <!-- Форма Образование и Работа -->
+  <form class="education-form">
+    <section class="section-header">
+      <h2>ОБРАЗОВАНИЕ И РАБОТА</h2>
+    </section>
+
+    <div class="field-group">
+      <label>• Информация об образовании</label>
+      <select>
+        <option>Учащийся общеобразовательного учреждения</option>
+        <option>Студент колледжа</option>
+        <option>Студент ВУЗа</option>
+      </select>
+    </div>
+
+    <div class="field-group">
+      <label>• Информация о трудоустройстве</label>
+      <select>
+        <option>учащийся</option>
+        <option>работающий</option>
+        <option>безработный</option>
+      </select>
+    </div>
+
+    <section class="section-header section-small">
+      <h3>МЕСТО УЧЕБЫ</h3>
+    </section>
+
+    <fieldset class="study-place">
+      <div class="field-group full-width">
+        <label>* Наименование учебного заведения</label>
+        <input type="text" placeholder=""/>
+      </div>
+
+      <div class="field-group full-width">
+        <label>* Регион</label>
+        <select>
+          <option>Укажите регион</option>
+          <option>Регион 1</option>
+          <option>Регион 2</option>
+        </select>
+      </div>
+
+      <div class="field-group full-width">
+        <label>* Населённый пункт</label>
+        <input type="text" placeholder=""/>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group half-width">
+          <label>* Дата поступления</label>
+          <select>
+            <option>Укажите месяц</option>
+            <option>Январь</option>
+            <option>Февраль</option>
+            <option>Март</option>
+          </select>
+        </div>
+
+        <div class="field-group half-width">
+          <label style="visibility: hidden;">Дата</label>
+          <select>
+            <option>Укажите год</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="button" class="add-more-btn">ДОБАВИТЬ ЕЩЁ</button>
+    </fieldset>
+  </form>
+
+  <!-- Карточка продукта -->
+  <div class="product-card">
+    <img src="qq.jpg" alt="Впитывающие салфетки" class="product-image" />
+    <div><span class="current-price">3,93 BYN</span><span class="old-price">5,00 BYN</span></div>
+    <div>Осталось 2 шт.</div>
+    <div>Салфетки для уборки Чистюля, 34х38 см</div>
+    <div><span>4,9</span> (914 отзывов)</div>
+    <button class="add-to-cart">В корзину</button>
+    <div>17 марта. OZON</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+/* === Базовые стили === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+.burger-header {
+  position: relative;
+  background-color: #3b38f3;
+  color: white;
+  padding: 10px 15px;
+}
+
+.burger-toggle {
+  display: none;
+}
+
+.burger-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.burger-menu {
+  display: none;
+  background-color: #3b38f3;
+  margin-top: 10px;
+}
+
+.burger-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.burger-menu li {
+  padding: 12px 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.burger-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.burger-menu a:hover {
+  background-color: #4f23bc;
+}
+
+/* Показываем меню при checked */
+.burger-toggle:checked + .burger-icon + .burger-menu {
+  display: block;
+}
+
+
+/* === Grid-сетка === */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-content: start;
+}
+
+.header {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0;
+  border: 1px solid black;
+}
+
+.left-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  border-right: 1px solid black;
+}
+.left-blocks > div {
+  border-right: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+.left-blocks > div:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+.right-blocks {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  border-left: 1px solid black;
+}
+.right-blocks > div {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px;
+}
+.right-blocks > div:first-child {
+  border-top: none;
+}
+
+.row {
+  border: 1px solid black;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.row5, .row6, .row7, .row14, .row15 {
+  grid-column: 1 / 3;
+}
+
+.cards {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.card {
+  width: 50px;
+  height: 80px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: white;
+}
+
+.footer {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+.footer > div {
+  flex: 1 1 0;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* === Форма "Образование и работа" === */
+.education-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #eee;
+  padding: 20px 30px 40px 30px;
+  border-radius: 3px;
+}
+
+.section-header h2,
+.section-header h3 {
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  border-bottom: 2px solid #bd2a2a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-header.section-small {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom-width: 1.5px;
+  font-size: 14px;
+}
+
+.field-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group label {
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="text"] {
+  background: #fff1d6;
+  border: 1px solid #d4b36e;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+select:hover,
+input[type="text"]:hover,
+select:focus,
+input[type="text"]:focus {
+  border-color: #bd2a2a;
+}
+
+fieldset.study-place {
+  border: 1px dotted #999;
+  padding: 15px 20px 30px 20px;
+  margin-top: 10px;
+  background: #fafafa;
+  border-radius: 3px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.field-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.half-width {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-more-btn {
+  background: #f7b600;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.2);
+}
+.add-more-btn:hover {
+  background: #d99c00;
+}
+
+/* === Карточка продукта === */
+.product-card {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin: 40px auto;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #eee;
+  display: block;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.old-price {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.stock {
+  color: #e53935;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rating-value {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.reviews {
+  color: #666;
+}
+
+.add-to-cart {
+  background-color: #3b38f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+.add-to-cart:hover {
+  background-color: #4f23bc;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.additional-info {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  clear: both;
+}
+
+/* === Адаптивность === */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+  }
+  .header {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .header,
+  .left-blocks,
+  .right-blocks,
+  .row5, .row6, .row7, .row14, .row15,
+  .cards,
+  .footer {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .left-blocks {
+    grid-template-columns: 1fr 1fr;
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+  .right-blocks {
+    grid-template-rows: 1fr 1fr;
+    border-left: none;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .footer > div {
+    width: 100%;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .education-form {
+    padding: 15px;
+  }
+}

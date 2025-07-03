@@ -1,0 +1,31 @@
+<!-- Файл: projects.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои проекты</title>
+</head>
+<body>
+    <header>
+        <h1>Мои проекты</h1>
+        <nav>
+            <!-- Навигация на главную -->
+            <a href="index.html">Вернуться на главную</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Проекты</h2>
+        <ul>
+            <li>Проект 1: Лендинг на HTML/CSS</li>
+            <li>Проект 2: Телеграм-бот на Python</li>
+            <li>Проект 3: Мой первый сайт на WordPress</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Влад. Все права защищены.</p>
+    </footer>
+</body>
+</html>

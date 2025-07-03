@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Мишкель Владислав Валерьевич">
+    <title>Мишкель Владислав Валерьевич</title>
+    <style>
+        body {
+            background-color: yellow;
+            font-size: 16pt;
+            font-family: "Times New Roman", serif;
+        }
+        .small-photo {
+            float: right;
+            border: 3px solid black;
+            width: 200px;
+            height: auto;
+        }
+        .kuurator {
+            background-color: lightgreen;
+            text-align: center;
+            font-weight: bold;
+        }
+        .form-field {
+            margin-bottom: 10px;
+        }
+        .form-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- №2: Форматирование текста -->
+    <h1 style="text-align: left;">Мишкель Владислав Валерьевич</h1>
+    <div style="color: green;"><sub>ПЗТ-41</sub></div>
+    <div style="text-align: right;"><sup>Курс: 3</sup></div>
+    <div style="text-align: center; text-decoration: underline;">Мои увлечения: Сон, еда</div>
+
+    <!-- №3: Создание списков -->
+    <h2>Список сезонов:</h2>
+    <ul>
+        <li>Зима</li>
+        <li>Весна</li>
+        <li>Лето</li>
+    </ul>
+
+    <!-- №4: Работа с изображениями -->
+    <h2>Изображение</h2>
+    <section>
+        <img src="vladi1.jpg" alt="Я и мои друзья" class="small-photo">
+    </section>
+
+    <!-- №5: Ссылки -->
+    <h2>Ссылки</h2>
+    <a href="projects.html" class="nav-link">Привет</a><br>
+    <a href="https://github.com/qq32252" target="_blank" class="nav-link">Произвольный электронный архив</a><br>
+
+    <!-- №6: Таблица -->
+    <h2>Таблица</h2>
+    <table border="1">
+        <tr>
+            <th>Учащийся</th>
+            <th>Группа</th>
+        </tr>
+        <tr>
+            <td>Мишкель</td>
+            <td rowspan="3">ПЗТ-41</td>
+        </tr>
+        <tr>
+            <td>Борисов</td>
+        </tr>
+        <tr>
+            <td>Козейко</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="kuurator">Куратор: Заяц Е.В.</td>
+        </tr>
+    </table>
+
+    <!-- №7: Пользовательская форма -->
+    <h2>Форма входа</h2>
+    <form>
+        <div class="form-field">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-field">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <!-- Первая строка: Запомнить и Вход -->
+        <div class="form-field form-buttons">
+            <div>
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">запомнить</label>
+            </div>
+            <button type="submit">Вход</button>
+        </div>
+
+        <!-- Вторая строка: Скрытый -->
+        <div class="form-field">
+            <input type="checkbox" id="hidden" name="hidden">
+            <label for="hidden">скрытый</label>
+        </div>
+
+        <!-- Третья строка: ссылки -->
+        <div>
+            <a href="#">Забыл пароль</a> | <a href="#">Регистрация</a>
+        </div>
+    </form>
+
+    
+
+</body>
+</html>

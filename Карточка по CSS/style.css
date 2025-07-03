@@ -1,0 +1,20 @@
+@import 'w2.css';
+
+/* Задание №1
+   Стиль оформления тела документа.
+   Установлены свойства шрифта для всего документа */
+body {
+    background-image: url('vladi1.jpg'); /* Фон — картинка с твоего ПК */
+    background-repeat: repeat-y; /* Повторяется по вертикали */
+    font-family: "Times New Roman", serif; /* Шрифт Times New Roman */
+    font-size: 30pt; /* Размер шрифта 30pt */
+    color: yellow; /* Цвет шрифта — жёлтый */
+    text-decoration: underline; /* Подчёркивание всего текста */
+}
+
+
+
+
+
+
+

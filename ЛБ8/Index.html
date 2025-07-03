@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Форма Образование и Работа</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <form class="education-form">
+
+    <section class="section-header">
+      <h2>ОБРАЗОВАНИЕ И РАБОТА</h2>
+    </section>
+
+    <div class="field-group">
+      <label>• Информация об образовании</label>
+      <select>
+        <option>Учащийся общеобразовательного учреждения</option>
+        <option>Студент колледжа</option>
+        <option>Студент ВУЗа</option>
+      </select>
+    </div>
+
+    <div class="field-group">
+      <label>• Информация о трудоустройстве</label>
+      <select>
+        <option>учащийся</option>
+        <option>работающий</option>
+        <option>безработный</option>
+      </select>
+    </div>
+
+    <section class="section-header section-small">
+      <h3>МЕСТО УЧЕБЫ</h3>
+    </section>
+
+    <fieldset class="study-place">
+      <div class="field-group full-width">
+        <label>* Наименование учебного заведения</label>
+        <input type="text" placeholder=""/>
+      </div>
+
+      <div class="field-group full-width">
+        <label>* Регион</label>
+        <select>
+          <option>Укажите регион</option>
+          <option>Регион 1</option>
+          <option>Регион 2</option>
+        </select>
+      </div>
+
+      <div class="field-group full-width">
+        <label>* Населённый пункт</label>
+        <input type="text" placeholder=""/>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group half-width">
+          <label>* Дата поступления</label>
+          <select>
+            <option>Укажите месяц</option>
+            <option>Январь</option>
+            <option>Февраль</option>
+            <option>Март</option>
+          </select>
+        </div>
+
+        <div class="field-group half-width">
+          <label style="visibility: hidden;">Дата</label>
+          <select>
+            <option>Укажите год</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="button" class="add-more-btn">ДОБАВИТЬ ЕЩЁ</button>
+    </fieldset>
+
+  </form>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* Общие стили */
+body {
+  font-family: sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+p, a, img, button, form {
+  margin-bottom: 20px;
+  display: block;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Стиль после изменения (Задание 3) */
+.style-changed {
+  background-color: yellow !important;
+  font-family: Arial !important;
+  font-size: 12px !important;
+  color: blue !important;
+}
+
+.style-changed img {
+  border: 1px solid green !important;
+}
+
+/* Первая форма (регистрация) */
+#validation-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input.invalid {
+  border-color: red;
+  background-color: #ffe5e5;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Вторая форма "Образование и Работа" */
+
+* {
+  box-sizing: border-box;
+}
+
+.education-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #eee;
+  padding: 20px 30px 40px 30px;
+  border-radius: 3px;
+}
+
+.section-header h2,
+.section-header h3 {
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  border-bottom: 2px solid #bd2a2a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-header.section-small {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom-width: 1.5px;
+  font-size: 14px;
+}
+
+.field-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group label {
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="text"] {
+  background: #fff1d6;
+  border: 1px solid #d4b36e;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+select:hover,
+input[type="text"]:hover,
+select:focus,
+input[type="text"]:focus {
+  border-color: #bd2a2a;
+}
+
+fieldset.study-place {
+  border: 1px dotted #999;
+  padding: 15px 20px 30px 20px;
+  margin-top: 10px;
+  background: #fafafa;
+  border-radius: 3px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.field-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.half-width {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Кнопка добавить еще */
+.add-more-btn {
+  background: #f7b600;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.2);
+}
+
+.add-more-btn:hover {
+  background: #d99c00;
+}
+
+/* Ошибки для второй формы */
+.education-form select.invalid,
+.education-form input.invalid {
+  border-color: red !important;
+  background-color: #ffe5e5 !important;
+}
+
+.education-form .error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

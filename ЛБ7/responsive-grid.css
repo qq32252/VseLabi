@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* левая часть шире правой */
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-content: start;
+}
+
+/* Верхняя объединённая строка (хедер) занимает две колонки */
+.header {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* как у контейнера */
+  grid-template-rows: auto auto;
+  gap: 0;
+  border: 1px solid black;
+}
+
+/* Левая часть хедера: блоки 1 и 2 горизонтально */
+.left-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* занимает две строки */
+  border-right: 1px solid black;
+}
+.left-blocks > div {
+  border-right: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+.left-blocks > div:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Правая часть хедера: блоки 3 и 4 вертикально */
+.right-blocks {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  border-left: 1px solid black;
+}
+.right-blocks > div {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px;
+}
+.right-blocks > div:first-child {
+  border-top: none;
+}
+
+/* Нижние ряды 5,6,7 - растянуты на всю ширину */
+.row {
+  border: 1px solid black;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.row5, .row6, .row7, .row14, .row15 {
+  grid-column: 1 / 3; /* растянуть на обе колонки */
+}
+
+/* Карточки идут по всей ширине */
+.cards {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.card {
+  width: 50px;
+  height: 80px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: white;
+}
+
+/* Футер — занимает обе колонки */
+.footer {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+.footer > div {
+  flex: 1 1 0;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Адаптивность */
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+  }
+  .header {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  /* Сброс grid-column и grid-row для корректной адаптивности */
+  .header,
+  .left-blocks,
+  .right-blocks,
+  .row5, .row6, .row7, .row14, .row15,
+  .cards,
+  .footer {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .left-blocks {
+    grid-template-columns: 1fr 1fr;
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+  .right-blocks {
+    grid-template-rows: 1fr 1fr;
+    border-left: none;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .footer > div {
+    width: 100%;
+  }
+}

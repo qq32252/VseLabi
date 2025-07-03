@@ -1,0 +1,147 @@
+/* Базовые стили для mobile-first подхода */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.header {
+    flex-direction: column;
+    gap: 0;
+}
+
+.left-blocks {
+    flex-direction: column;
+}
+
+.left-blocks > div {
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+
+.right-blocks {
+    border-left: none;
+    border-top: 1px solid black;
+}
+
+.cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: calc(50% - 20px);
+    height: 60px;
+}
+
+.footer {
+    flex-direction: column;
+}
+
+/* Планшет (768px и выше) */
+@media (min-width: 768px) {
+    .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .header {
+        flex-direction: row;
+    }
+    
+    .left-blocks {
+        flex-direction: row;
+    }
+    
+    .left-blocks > div {
+        border-right: 1px solid black;
+        border-bottom: none;
+    }
+    
+    .right-blocks {
+        border-left: 1px solid black;
+        border-top: none;
+    }
+    
+    .card {
+        width: calc(33.333% - 20px);
+    }
+    
+    .footer {
+        flex-direction: row;
+    }
+}
+
+/* Десктоп (992px и выше) */
+@media (min-width: 992px) {
+    .header {
+        flex-wrap: nowrap;
+    }
+    
+    .left-blocks {
+        flex: 3;
+    }
+    
+    .right-blocks {
+        flex: 1;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: calc(16.666% - 20px);
+    }
+    
+    .row:not(.header):not(.cards):not(.footer) {
+        height: 50px;
+    }
+}
+
+/* Дополнительные корректировки для очень больших экранов */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .card {
+        width: 50px;
+    }
+}
+
+/* Цвета для блоков (можно оставить в основном файле) */
+.left-blocks > div:nth-child(1) { background: #ff9999; }
+.left-blocks > div:nth-child(2) { background: #ffcc99; }
+.right-blocks > div:nth-child(1) { background: #ffff99; }
+.right-blocks > div:nth-child(2) { background: #ccff99; }
+
+.row:nth-of-type(2) { background: #99ffcc; }
+.row:nth-of-type(3) { background: #99ffff; }
+.row:nth-of-type(4) { background: #9999ff; }
+
+.card:nth-child(1) { background: #cc99ff; }
+.card:nth-child(2) { background: #ff99cc; }
+.card:nth-child(3) { background: #ff6666; }
+.card:nth-child(4) { background: #ffb266; }
+.card:nth-child(5) { background: #ffff66; }
+.card:nth-child(6) { background: #b3ff66; }
+
+.row:nth-of-type(6) { background: #66ffe0; }
+.row:nth-of-type(7) { background: #66ccff; }
+
+.footer > div:nth-child(1) { background: #6699ff; }
+.footer > div:nth-child(2) { background: #9966ff; }
